@@ -20,14 +20,14 @@ const CitySelector = () => {
       .catch(error => console.error('Error fetching countries:', error));
   };
 
-  const fetchStates = () => {
-    if (selectedCountry) {
-      fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/states`)
-        .then(response => response.json())
-        .then(data => setStates(data))
-        .catch(error => console.error('Error fetching states:', error));
-    }
-  };
+  // const fetchStates = () => {
+  //   if (selectedCountry) {
+  //     fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/states`)
+  //       .then(response => response.json())
+  //       .then(data => setStates(data))
+  //       .catch(error => console.error('Error fetching states:', error));
+  //   }
+  // };
 
   // const fetchCities = () => {
   //   if (selectedCountry && selectedState) {
@@ -37,6 +37,19 @@ const CitySelector = () => {
   //       .catch(error => console.error('Error fetching cities:', error));
   //   }
   // };
+
+  const fetchStates = () => {
+    if (selectedCountry) {
+      fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/states`)
+        .then(response => response.json())
+        .then(data => setStates(data))
+        .catch(error => {
+          console.error('Error fetching states:', error);
+          setStates([]); // Reset states state in case of error
+        });
+    }
+  };
+  
   const fetchCities = () => {
     if (selectedCountry && selectedState) {
       fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`)
