@@ -1,0 +1,21 @@
+/* app.css */
+
+.city-selector {
+  margin: 20px;
+}
+
+.h1 {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.city-selector select {
+  margin: 10px;
+  padding: 5px;
+}
+
+.selected-location {
+  margin-top: 20px;
+  font-weight: bold;
+}
