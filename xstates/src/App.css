@@ -1,17 +1,41 @@
-/* app.css */
+/* app.css
 
-.city-selector {
+/* .city-selector {
   margin: 20px;
-}
+} */
 
 
-
+/* 
 .city-selector select {
   margin: 10px;
   padding: 5px;
-}
+} */
 
-.selected-location {
+/* .selected-location {
   margin-top: 20px;
   font-weight: bold;
+} */ 
+
+/* App.css */
+.App {
+  text-align: center;
+  margin-top: 50px;
 }
+
+h1 {
+  font-size: 24px;
+}
+
+select {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
