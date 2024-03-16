@@ -23,6 +23,7 @@ function App() {
     fetchCountries();
   }, []);
 
+
   useEffect(() => {
     async function fetchStates() {
       if (selectedCountry) {
@@ -37,6 +38,7 @@ function App() {
     }
     fetchStates();
   }, [selectedCountry]);
+
 
   useEffect(() => {
     async function fetchCities() {
@@ -53,6 +55,8 @@ function App() {
     fetchCities();
   }, [selectedCountry, selectedState]);
 
+
+  
   return (
     <div className="App">
       <h1>Location Selector</h1>
